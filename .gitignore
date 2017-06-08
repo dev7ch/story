@@ -1,0 +1,40 @@
+# netbeans
+/nbproject
+
+# PHPStorm
+.idea/
+
+# Sublime text
+*.sublime-project
+*.sublime-workspace
+.phpintel/
+
+# composer vendor dir
+/vendor
+
+# composer itself
+composer.phar
+
+# mac DS_Store files
+.DS_Store
+
+/bin
+
+# public files
+#/public_html/assets
+#/public_html/storage
+
+# project config
+/configs/env-local-db.php
+/configs/env.php
+
+# eclipse
+.buildpath
+.project
+.settings
+
+# SASS
+/resources/.sass-cache
+
+# Compiled files
+/resources/local/
