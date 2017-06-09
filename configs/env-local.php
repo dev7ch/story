@@ -68,7 +68,25 @@ $config = [
         /*
          * This is the administration module for the `cms` module.
          */
-        'cmsadmin' => 'luya\cms\admin\Module',
+        'cmsadmin' => [
+            'class' => 'luya\cms\admin\Module',
+            'hiddenBlocks' => [
+                \luya\cms\frontend\blocks\DevBlock::className(),
+                \luya\cms\frontend\blocks\AudioBlock::className(),
+                \luya\cms\frontend\blocks\LineBlock::className(),
+                \luya\cms\frontend\blocks\TextBlock::className(),
+                \luya\cms\frontend\blocks\ImageTextBlock::className(),
+                \luya\cms\frontend\blocks\LinkButtonBlock::className(),
+                \luya\cms\frontend\blocks\ListBlock::className(),
+                \luya\cms\frontend\blocks\TableBlock::className(),
+                \luya\cms\frontend\blocks\TitleBlock::className(),
+                \luya\cms\frontend\blocks\FileListBlock::className(),
+                \luya\cms\frontend\blocks\WysiwygBlock::className(),
+                \luya\cms\frontend\blocks\QuoteBlock::className(),
+                \luya\cms\frontend\blockgroups\MediaGroup::className(),
+                \luya\cms\frontend\blockgroups\LayoutGroup::className(),
+                ]
+            ],
     ],
     'components' => [
         

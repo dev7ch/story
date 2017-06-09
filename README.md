@@ -117,9 +117,9 @@ Please have a look at the [Luya Guide](https://luya.io/guide) if you have any pr
 Congratulations, head over to your new website.
 
 
-- <code> http://localhost/story/public_html </code>
+- <code> http://< your webroot >/story/public_html </code>
 
-- <code> http://localhost/story/public_html/admin </code>
+- <code> http://< your webroot >/story/public_html/admin </code>
 
 
 ## Front-End

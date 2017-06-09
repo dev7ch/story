@@ -16,6 +16,8 @@
 		background-color: inherit;
 		width: 100%;
 		overflow-x: hidden;
+		filter: blur(0);
+		transition: filter .5s ease-in-out;
 
 		> .invert {
 			@include color(invert);
