@@ -142,7 +142,7 @@ class DynamicContentBlock extends PhpBlock
     {
         return [
             'image' => BlockHelper::imageUpload($this->getVarValue('image'), false, true),
-            'imageAdmin' => BlockHelper::imageUpload($this->getVarValue('image'), 'thumbnail-small', true),
+            'imageAdmin' => BlockHelper::imageUpload($this->getVarValue('image'), 'small-thumbnail', true),
         ];
     }
 

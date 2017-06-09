@@ -19,7 +19,7 @@ $this->beginPage();
     <body>
     <?php $this->beginBody() ?>
     <input id="menu-toggler" class="mainnav__toggler" type="checkbox" name="menu-toggler">
-    <header id="nav" class="mainnav mainnav--down">
+    <header id="nav" class="mainnav mainnav--up">
         <label for="menu-toggler">
             <div class="wrapper style1">
                     <div class="mainnav__burger" id="mainnav__burger-11">
@@ -42,14 +42,14 @@ $this->beginPage();
                     <!-- Menu level 2 -->
                     <ul>
                         <? foreach ($item->children as $secondItem): ?>
-                            <li class="link<?php if ($secondItem->isActive): ?> active<?php endif;?>">
-                                <a class="mainnav__link--sub<?php if ($secondItem->hasChildren == true): ?> button small icon fa-chevron-down closed<? endif; ?>" href="<?= $secondItem->link; ?>"><?= $secondItem->title; ?></a>
+                            <li class="link">
+                                <a class="mainnav__link--sub button small <?php if (!$secondItem->isActive): ?> special<?php endif;?><?php if ($secondItem->hasChildren == true): ?> icon fa-chevron-down closed<? endif; ?>" href="<?= $secondItem->link; ?>"><?= $secondItem->title; ?></a>
                                 <!-- Menu level 2 -->
                                 <? if ($secondItem->hasChildren): ?>
                                     <ul>
                                         <? foreach ($secondItem->children  as $thirdItem): ?>
-                                            <li class="mainnav__link--sub<?php if ($thirdItem->isActive): ?> active<?php endif;?>">
-                                                <a href="<?= $thirdItem->link; ?>" class="mainnav__link--sub <?php if ($thirdItem->hasChildren == true): ?> button small icon fa-chevron-down closed<? endif; ?>"><?= $thirdItem->title; ?></a>
+                                            <li class="mainnav__link--sub">
+                                                <a href="<?= $thirdItem->link; ?>" class="mainnav__link--sub button small<?php if (!$thirdItem->isActive): ?> special<?php endif;?><?php if ($thirdItem->hasChildren == true): ?> icon fa-chevron-down closed<? endif; ?>"><?= $thirdItem->title; ?></a>
                                             </li>
                                         <? endforeach; ?>
                                     </ul>

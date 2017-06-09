@@ -1,15 +1,23 @@
 # LUYA CMS Kickstarter - STORY 
 
-<img src="story_screenshot.png" />
+<img src="screenshot_story.png" />
 
 ## Features
 
+Create modern portfolio websites in a few minutes.
+This LUYA CMS Kickstarter provides a highly flexible content block wich lets 
+you define styles, colors, size, animations and much more from the admin area. 
+
+> This project ist still under development
+
 * Complete [LUYA CMS](https://luya.io) integration
 * Fully responsive and ready to use
-* Admin area integration
+* Highly customizable content styles
+* Gallery with different styles and lightbox support
+* Full admin integration 
 * Customizable blocks with drag 'n' drop support 
+* SCSS and Gulp workflow for compiling
 * Multi level navigation included
-* SCSS and Gulp workflow included
 
 
 ## Installation

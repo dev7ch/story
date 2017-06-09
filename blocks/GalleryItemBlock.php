@@ -70,6 +70,7 @@ class GalleryItemBlock extends PhpBlock
     {
         return [
             'image' => BlockHelper::imageUpload($this->getVarValue('image'), false, true),
+            'imageThumbnail' => BlockHelper::imageUpload($this->getVarValue('image'), 'medium-thumbnail', true),
             'imageAdmin' => BlockHelper::imageUpload($this->getVarValue('image'), 'small-thumbnail', true),
         ];
     }
