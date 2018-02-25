@@ -35,11 +35,7 @@ $config = [
      * Define the basePath of the project (Yii Configration Setup
      */
     'basePath' => dirname(__DIR__),
-    
-    /*
-     * Admin interface default language. Currently supported: "en", "de", "fr", "es", "ru", "it", "ua", "el".
-     */
-    'luyaLanguage' => 'en',
+
     
     'modules' => [
 
@@ -54,7 +50,7 @@ $config = [
         'admin' => [
             'class' => 'luya\admin\Module',
             'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
-            //'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: "en", "de", "fr", "es", "ru", "it", "ua", "el".
+            'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: "en", "de", "fr", "es", "ru", "it", "ua", "el".
         ],
         
         /*
@@ -62,7 +58,7 @@ $config = [
          */
         'cms' => [
             'class' => 'luya\cms\frontend\Module',
-            'enableCompression' => true, // compressing the cms output (removing white spaces and newlines)
+            'contentCompression' => true, // compressing the cms output (removing white spaces and newlines)
         ],
 
         /*
@@ -70,23 +66,8 @@ $config = [
          */
         'cmsadmin' => [
             'class' => 'luya\cms\admin\Module',
-            'hiddenBlocks' => [
-                \luya\cms\frontend\blocks\DevBlock::className(),
-                \luya\cms\frontend\blocks\AudioBlock::className(),
-                \luya\cms\frontend\blocks\LineBlock::className(),
-                \luya\cms\frontend\blocks\TextBlock::className(),
-                \luya\cms\frontend\blocks\ImageTextBlock::className(),
-                \luya\cms\frontend\blocks\LinkButtonBlock::className(),
-                \luya\cms\frontend\blocks\ListBlock::className(),
-                \luya\cms\frontend\blocks\TableBlock::className(),
-                \luya\cms\frontend\blocks\TitleBlock::className(),
-                \luya\cms\frontend\blocks\FileListBlock::className(),
-                \luya\cms\frontend\blocks\WysiwygBlock::className(),
-                \luya\cms\frontend\blocks\QuoteBlock::className(),
-                \luya\cms\frontend\blockgroups\MediaGroup::className(),
-                \luya\cms\frontend\blockgroups\LayoutGroup::className(),
-                ]
-            ],
+            'hiddenBlocks' => []
+        ]
     ],
     'components' => [
         
